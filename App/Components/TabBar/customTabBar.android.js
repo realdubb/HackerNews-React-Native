@@ -1,6 +1,7 @@
 'use strict';
+import React, { Component } from 'react';
 
-var React = require('react-native');
+var ReactNative = require('react-native');
 var {
   StyleSheet,
   Text,
@@ -8,7 +9,7 @@ var {
   TouchableOpacity,
   Animated,
   StatusBar,
-} = React;
+} = ReactNative;
 
 var Icon = require('react-native-vector-icons/FontAwesome');
 
@@ -60,7 +61,7 @@ var CustomTabBar = React.createClass({
     var isTabActive = this.props.activeTab === page;
     return (
       <TouchableOpacity key={valsString} onPress={() => this.props.goToPage(page)} style={styles.tab}>
-        <Icon name={vals[1]} 
+        <Icon name={vals[1]}
               size={parseInt(vals[2])}
               color={'gray'} />
         <Text style={styles.labelText}>

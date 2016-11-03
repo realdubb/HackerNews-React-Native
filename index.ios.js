@@ -1,12 +1,11 @@
 'use strict';
+import React, { Component } from 'react';
 
-var React = require('react-native');
-
-var {
+import ReactNative, {
   AppRegistry,
   StyleSheet,
-  NavigatorIOS,
-} = React;
+  NavigatorIOS
+} from 'react-native';
 
 var Dashboard = require('./App/Views/Dashboard/index.ios.js');
 

@@ -1,6 +1,7 @@
 'use strict';
+import React, { Component } from 'react';
 
-var React = require('react-native');
+var ReactNative = require('react-native');
 
 var {
   AppRegistry,
@@ -9,7 +10,7 @@ var {
   View,
   WebView,
   BackAndroid
-} = React;
+} = ReactNative;
 
 var _navigator;
 

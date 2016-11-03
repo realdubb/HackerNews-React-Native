@@ -6,10 +6,11 @@
     "start": "react-native start"
   },
   "dependencies": {
-    "react-native": "^0.20.0",
-    "react-native-gifted-listview": "0.0.12",
-    "react-native-scrollable-tab-view": "^0.3.8",
-    "react-native-vector-icons": "^1.2.1",
-    "react-native-activity-view": "^0.2.5"
+    "react": "^15.3.2",
+    "react-native": "^0.36.1",
+    "react-native-activity-view": "andue/react-native-activity-view#2febb43",
+    "react-native-gifted-listview": "^0.0.15",
+    "react-native-scrollable-tab-view": "^0.6.0",
+    "react-native-vector-icons": "^3.0.0"
   }
 }

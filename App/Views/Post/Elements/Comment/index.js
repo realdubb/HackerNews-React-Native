@@ -1,11 +1,11 @@
-var React = require('react-native');
+import React, { Component } from 'react';
 
-var {
-	StyleSheet,
-    Text,
-    View,
-    TouchableHighlight
-} = React;
+import ReactNative, {
+  StyleSheet,
+  Text,
+  View,
+  TouchableHighlight
+} from 'react-native';
 
 var api = require("../../../../Network/api.js");
 
@@ -105,6 +105,9 @@ var Comment = React.createClass({
 		        if (index < subCommentIDs.length){
 		            fetch(api.HN_ITEM_ENDPOINT+subCommentIDs[index]+".json")
 		            .then((response) => response.json())
+                    .catch((error) => {
+        console.error(error);
+      })
 		            .then((item) => {
 		                item.count = index+1;
                         if(!item.deleted){

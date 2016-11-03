@@ -1,14 +1,14 @@
 'use strict';
+import React, { Component } from 'react';
 
-var React = require('react-native');
-
-var {
+import ReactNative, {
   StyleSheet,
   Text,
   View,
   TouchableHighlight,
   WebView
-} = React;
+} from 'react-native';
+
 
 var api = require("../../Network/api.js");
 
@@ -113,7 +113,9 @@ module.exports = React.createClass({
                 }
                 startIndex++;
                 iterateAndFetch();
-            })
+            }).catch((error) => {
+        console.error(error);
+      })
             .done();
         }
         else {

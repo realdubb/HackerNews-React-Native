@@ -2,7 +2,7 @@
  * Component Name: TabBar
  * Author: Simar Singh (github/iSimar)
  * Description: This component is used for render a TabBar
- * 
+ *
  * Dependencies:
  *  -> react-native-vector-icons 1.0.3 (https://github.com/oblador/react-native-vector-icons)
  *      - This library is used for fontawesome icons on the TabBar. For iOS only use
@@ -22,19 +22,19 @@
  *                         }]}
  *             selectedTab={0}/>
  */
-var React = require('react-native');
+import React, { Component } from 'react';
 
-var {
-	View,
+import ReactNative, {
+    View,
     TabBarIOS,
     StyleSheet,
     Platform
-} = React;
+} from 'react-native';
 
 var ScrollableTabView = require('react-native-scrollable-tab-view');
 var CustomTabBar = require('./customTabBar.android.js');
 
-var Icon = require('react-native-vector-icons/FontAwesome');
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 module.exports = React.createClass({
 	getInitialState: function(){
@@ -52,7 +52,7 @@ module.exports = React.createClass({
 								   onChangeTab={(o)=>{}}
                            		   tabBarPosition={'bottom'}
                                    initialPage={this.state.selectedTab}>
-                    {this.state.structure.map((tabProps, tabIndex) => 
+                    {this.state.structure.map((tabProps, tabIndex) =>
                     	<View style={{flex:1}}
                     		  tabLabel={tabProps.title+'!$#'
                     				   +tabProps.iconName+'!$#'
@@ -67,7 +67,7 @@ module.exports = React.createClass({
         return(
             <TabBarIOS tintColor={this.state.activeTintColor}
             		   translucent={true}>
-            	{this.state.structure.map((tabProps, tabIndex) => 
+            	{this.state.structure.map((tabProps, tabIndex) =>
             		<Icon.TabBarItem title={tabProps.title}
             						 iconName={tabProps.iconName}
             						 iconSize={this.state.iconSize}
